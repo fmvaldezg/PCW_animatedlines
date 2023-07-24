@@ -42,7 +42,7 @@ body { margin: 0; padding: 0; }
     map.on('load', () => {
         map.addSource('line', {
             type: 'geojson',
-            data: geojson
+            data: 'https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/level1.geojson'
         });
 
         // add a line layer without line-dasharray defined to fill the gaps in the dashed line
@@ -51,8 +51,8 @@ body { margin: 0; padding: 0; }
             source: 'line',
             id: 'line-background',
             paint: {
-                'line-color': 'yellow',
-                'line-width': 6,
+                'line-color': 'lime',
+                'line-width': 4,
                 'line-opacity': 0.4
             }
         });
@@ -63,8 +63,8 @@ body { margin: 0; padding: 0; }
             source: 'line',
             id: 'line-dashed',
             paint: {
-                'line-color': 'yellow',
-                'line-width': 6,
+                'line-color': 'lime',
+                'line-width': 4,
                 'line-dasharray': [0, 4, 3]
             }
         });
@@ -94,7 +94,7 @@ body { margin: 0; padding: 0; }
             // Update line-dasharray using the next value in dashArraySequence. The
             // divisor in the expression `timestamp / 50` controls the animation speed.
             const newStep = parseInt(
-                (timestamp / 50) % dashArraySequence.length
+                (timestamp / 100) % dashArraySequence.length
             );
 
             if (newStep !== step) {
