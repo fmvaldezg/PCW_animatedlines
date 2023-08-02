@@ -212,18 +212,18 @@
 
 
         // add a line layer without line-dasharray defined to fill the gaps in the dashed line
-        map.addLayer({
-            type: 'line',
-            source: 'line',
-            id: 'line-background',
-            visibility: 'none',
-            minzoom: 13,
-            paint: {
-                'line-color': 'lime',
-                'line-width': 4,
-                'line-opacity': 0.4
-            }
-        });
+        //map.addLayer({
+            //type: 'line',
+            //source: 'line',
+            //id: 'line-background',
+            //visibility: 'none',
+            //minzoom: 13,
+            //paint: {
+                //'line-color': 'lime',
+                //'line-width': 4,
+                //'line-opacity': 0.4
+            //}
+        //});
 
         // add a line layer with line-dasharray set to the first value in dashArraySequence
         map.addLayer({
@@ -239,18 +239,18 @@
             }
         });
 
-        map.addLayer({
-            type: 'line',
-            source: 'new-line',
-            id: 'new-line-background',
-            visibility: 'none',
-            minzoom: 13,
-            paint: {
-              'line-color': 'magenta',
-              'line-width': 4,
-              'line-opacity': 0.4
-            }
-          });
+        //map.addLayer({
+            //type: 'line',
+            //source: 'new-line',
+            //id: 'new-line-background',
+            //visibility: 'none',
+            //minzoom: 13,
+            //paint: {
+              //'line-color': 'magenta',
+              //'line-width': 4,
+              //'line-opacity': 0.4
+            //}
+          //});
 
           // Add a line layer with line-dasharray set to the first value in dashArraySequence for the new layer
           map.addLayer({
