@@ -137,11 +137,11 @@
         popup: '<h3>High Sites</h3><p>{name}</p>'
       },
       {
-        url: 'https://raw.githubusercontent.com/fmvaldezg/PCWmap/main/data/rooftop_hubs.geojson',
+        url: 'https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/RoofTops.geojson',
         icon: 'https://raw.githubusercontent.com/fmvaldezg/PCWmap/main/icons/RooftopHub.png',
         id: 'rooftop-hubs-layer',
         name: 'Rooftop Hubs',
-        popup: '<h3>Rooftop Hubs</h3><p>{name}</p><p><img src={img}></img></p>'
+        popup: '<h3>Rooftop Hubs</h3><p>{name}</p>'
       },
       {
         url: 'https://raw.githubusercontent.com/fmvaldezg/PCWmap/main/data/mesh_nodes.geojson',
@@ -443,7 +443,7 @@ function toggleNewLine() {
     map.on('mouseenter', 'rooftop-hubs-layer', (e) => {
       map.getCanvas().style.cursor = 'pointer';
       const coordinates = e.features[0].geometry.coordinates.slice();
-      const layerIndex = layers.findIndex(layer => layer.url === 'https://raw.githubusercontent.com/fmvaldezg/PCWmap/main/data/rooftop_hubs.geojson');
+      const layerIndex = layers.findIndex(layer => layer.url === 'https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/RoofTops.geojson');
       const nameProperty = e.features[0].properties.name;
       const popupContent = layers[layerIndex].popup.replace('{name}', nameProperty);
       popup.setLngLat(coordinates).setHTML(popupContent).addTo(map);
