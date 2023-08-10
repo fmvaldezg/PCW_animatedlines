@@ -52,6 +52,16 @@
       margin-left: 10px; /* Add margin to the left for the text */
     }
 
+    .popup-image-container {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .popup-image {
+      max-width: 100%;
+      height: auto;
+    }
+
 
 
   </style>
@@ -141,7 +151,6 @@
         icon: 'https://raw.githubusercontent.com/fmvaldezg/PCWmap/main/icons/RooftopHub.png',
         id: 'rooftop-hubs-layer',
         name: 'Rooftop Hubs',
-        popup: '<h3>Rooftop Hubs</h3><p>{name}</p>'
       },
       {
         url: 'https://raw.githubusercontent.com/fmvaldezg/PCWmap/main/data/mesh_nodes.geojson',
@@ -445,7 +454,12 @@ function toggleNewLine() {
       const coordinates = e.features[0].geometry.coordinates.slice();
       const layerIndex = layers.findIndex(layer => layer.url === 'https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/RoofTops.geojson');
       const nameProperty = e.features[0].properties.name;
-      const popupContent = layers[layerIndex].popup.replace('{name}', nameProperty);
+      const imageLink = e.features[0].properties.image;
+      const popupContent =  `
+        <div class="popup-image-container">
+          <h3>${nameProperty}</h3>
+          <img src="${imageLink}" alt="Image" class="popup-image">
+        </div>`;
       popup.setLngLat(coordinates).setHTML(popupContent).addTo(map);
     });
 
