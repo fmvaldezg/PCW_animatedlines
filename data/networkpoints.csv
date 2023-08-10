@@ -1,0 +1,43 @@
+name,id,Street address,type,image,Latitude,Longitude
+Gotham Tower,HS001,2000 N 2nd St,HS,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981349,-75.137339
+Jasper Studios,HS002,2930 Jasper St,HS,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.992775,-75.118189
+2246 N Howard St,MN001,2246 N Howard St,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.984494,-75.133482
+2151 N Howard Street,MN002,2151 N Howard Street,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.98325,-75.133569
+2244 N Howard St,MN003,2244 N Howard St,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.983092,-75.133623
+"NSNP Basement
+",MN004,2141 N Howard St,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.982952,-75.133666
+NSCA ,MN005,2116 N Hancock St,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.982845,-75.13593
+Grocery Store,MN006,2263 N Howard St,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.984812,-75.133173
+Las Parcelas Mesh,MN007,,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.985142,-75.135809
+Colobo Gardens Solar Mesh ,MN008,,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.984897,-75.135458
+GALAEI,MN009,,MN,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981383,-75.134326
+Free Library Kensington South West corner,RH001,104 W Dauphin St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.98447,-75.132786
+Free Library Kensington North West corner,RH002,104 W Dauphin St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.984795,-75.132707
+Dave,RH003,114 Diamond St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981595,-75.133736
+"Tony's bar Halftime Goodtimes
+",RH004,114 Diamond St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981751,-75.134091
+"from Free Library Kensington branch
+",RH005,2119 N 2nd St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.982646,-75.136555
+"West Kensington Ministries
+",RH006,2136 N Hancock St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.983224,-75.135642
+NSNP,RH007,2141 N Howard St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.982848,-75.133617
+2311 N Howard St,RH008,2311 N Howard St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.985224,-75.133102
+Las Parcelas,RH009,2248 Palethorp St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.984766,-75.135861
+NSCA ,RH010,147 Susquehannah Ave,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.983624,-75.134738
+NSCA ,RH011,2114 N Hancock St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.982641,-75.135951
+PW customer,RH012,2130 N Hancock St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.983063,-75.135702
+2024 N 4th St,RH013,2024 N 4th St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.98185,-75.140659
+2141 N 2nd St,RH014,2141 N 2nd St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.983131,-75.136482
+1425 N American St,RH015,1425 N American St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.97352,-75.139536
+"Iglesias Gardens / Angel
+",RH016,1941 N Lawrence St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.980842,-75.141518
+137 Susquehannah Ave,RH017,137 Susquehannah Ave,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.983767,-75.134233
+1030 Mascher St,RH018,1030 Mascher St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981282,-75.135146
+Lillian Marrero Library,RH019,601 W Lehigh Ave,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.992783,-75.142415
+Prevention Point,RH020,2913 Kensington Ave,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.992792,-75.119824
+700 W Cambria St,RH021,700 W Cambria St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.995649,-75.143257
+541 W Lehigh St,RH022,541 W Lehigh St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.992638,-75.141838
+NSCA St. Boniface Highschool,RH023,2014 N Mascher St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981443,-75.13514
+NSCA St. Boniface Highschool,RH024,2014 N Mascher St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981236,-75.135104
+NSCA St. Boniface Highschool,RH025,2014 N Mascher St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.981068,-75.135266
+NSCA Children's Center,RH026,2014 N Mascher St,RH,https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/img/img1.jpg,39.980443,-75.1348
