@@ -63,15 +63,11 @@
       height: auto;
     }
 
-
-
   </style>
 </head>
 <body>
   <div id="map"></div>
     <div class="map-overlay">
-
-
   </div>
   
   <div class="bookmarks">
@@ -108,9 +104,9 @@
     </div>
     <div>Navigate to:</div>
     <div class="inline-flex flex--column">
-    <button class="btn btn--gray btn--pill-vt" onclick="navigateToBookmark(1, 0, 0)">Norris Square Park</button>
-    <button class="btn btn--gray btn--pill-vc" onclick="navigateToBookmark(2, 0, 90)">Existing Network</button>
-    <button class="btn btn--gray btn--pill-vb" onclick="navigateToBookmark(3, 60, 180)">3D View</button>
+    <button class="btn btn--gray btn--pill-vt" onclick="navigateToBookmark(1, 67, -120.83)">Norris Square Park</button>
+    <button class="btn btn--gray btn--pill-vc" onclick="navigateToBookmark(2, 64, -168.84)">Fairhill Square Park</button>
+    <button class="btn btn--gray btn--pill-vb" onclick="navigateToBookmark(3, 64.21, -118.40)">McPherson Square Park</button>
     </div>
     <div>Animate Network:</div>
     <label class="switch-container">
@@ -167,12 +163,12 @@
 
         map.addSource('line', {
             type: 'geojson',
-            data: 'https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/level1.geojson'
+            data: 'https://raw.githubusercontent.com/phillycommunitywireless/pcwnetworkmap/main/data/level1.geojson'
         });
 
         map.addSource('new-line', {
             type: 'geojson',
-            data: 'https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/level2.geojson'
+            data: 'https://raw.githubusercontent.com/phillycommunitywireless/pcwnetworkmap/main/data/level2.geojson'
           });
 
 
@@ -325,6 +321,30 @@
         animateDashArray(0);
         animateNewLine(0);
 
+      map.setLayoutProperty(heatmapLayer.id, 'visibility', 'none');
+      map.setLayoutProperty('line-background', 'visibility', 'none');
+      map.setLayoutProperty('line-dashed', 'visibility', 'none');
+      map.setLayoutProperty('new-line-background', 'visibility', 'none');
+      map.setLayoutProperty('new-line-dashed', 'visibility', 'none');
+
+
+      map.on('mouseenter', 'network-points-layer', (e) => {
+            map.getCanvas().style.cursor = 'pointer';
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const nameProperty = e.features[0].properties.name; // Make sure this property exists in your data
+            const imageLink = e.features[0].properties.image; // Make sure this property exists in your data
+            const popupContent = `
+            <div class="popup-image-container">
+                <h3>${nameProperty}</h3>
+                <img src="${imageLink}" alt="Image" class="popup-image">
+            </div>`;
+            popup.setLngLat(coordinates).setHTML(popupContent).addTo(map);
+        });
+
+        map.on('mouseleave', 'network-points-layer', () => {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+        });
 
     });
 
@@ -373,13 +393,34 @@ function toggleNewLine() {
   }
 }
 
+const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
+
+map.on('mouseenter', 'network-points-layer', (e) => {
+      map.getCanvas().style.cursor = 'pointer';
+      const coordinates = e.features[0].geometry.coordinates.slice();
+      const layerIndex = layers.findIndex(layer => layer.url === 'https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/networkpoints.geojson');
+      const nameProperty = e.features[0].properties.name;
+      const imageLink = e.features[0].properties.image;
+      const popupContent =  `
+        <div class="popup-image-container">
+          <h3>${nameProperty}</h3>
+          <img src="${imageLink}" alt="Image" class="popup-image">
+        </div>`;
+      popup.setLngLat(coordinates).setHTML(popupContent).addTo(map);
+    });
+
+map.on('mouseleave', 'network-points-layer', () => {
+    map.getCanvas().style.cursor = '';
+    popup.remove();
+});
+
     // Function to navigate to a bookmark
     function navigateToBookmark(bookmarkId, pitch, bearing) {
       switch (bookmarkId) {
           case 1:
             map.flyTo({
-              center: [-75.13537, 39.98299],
-              zoom: 16.7,
+              center: [-75.13430, 39.98393],
+              zoom: 16.50,
               pitch: pitch,
               bearing: bearing,
               speed: 0.8,
@@ -388,8 +429,8 @@ function toggleNewLine() {
             break;
           case 2:
             map.flyTo({
-              center: [-75.1300, 39.9825],
-              zoom: 13.7,
+              center: [-75.14355, 39.99292],
+              zoom: 15.20,
               pitch: pitch,
               bearing: bearing,
               speed: 0.8,
@@ -398,8 +439,8 @@ function toggleNewLine() {
             break;
           case 3:
             map.flyTo({
-              center: [-75.1358, 39.9840],
-              zoom: 17,
+              center: [-75.12032, 39.99309],
+              zoom: 16,
               pitch: pitch,
               bearing: bearing,
               speed: 0.8,
@@ -410,10 +451,8 @@ function toggleNewLine() {
             break;
         }
       
-      //map.flyTo({ center, zoom });
     }
 
-  
   const heatmapLayer = {
   id: 'heatmap-layer',
   type: 'heatmap',
@@ -519,21 +558,9 @@ fetch('https://raw.githubusercontent.com/fmvaldezg/PCW_animatedlines/main/data/n
 
     map.addLayer(heatmapLayer);
     
-    map.setLayoutProperty(heatmapLayer.id, 'visibility', 'visible');
-
-    map.on('load', () => {
-      map.setLayoutProperty(heatmapLayer.id, 'visibility', 'none');
-      map.setLayoutProperty('line-background', 'visibility', 'none');
-      map.setLayoutProperty('line-dashed', 'visibility', 'none');
-      map.setLayoutProperty('new-line-background', 'visibility', 'none');
-      map.setLayoutProperty('new-line-dashed', 'visibility', 'none');
-    });
-
-
     map.getSource('heatmap-source').setData(data);
     
   });
-
 
 // Create an object to track the visibility status of each layer
 const visibilityStatus = {
@@ -608,8 +635,6 @@ function toggleHeatmapLayer() {
     map.setLayoutProperty(heatmapLayer.id, 'visibility', 'none');
   }
 }
-
-
 
 const nav = new mapboxgl.NavigationControl({
 visualizePitch: true
