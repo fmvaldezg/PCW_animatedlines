@@ -623,8 +623,6 @@ fetch('https://raw.githubusercontent.com/fmvaldezg/PCWmap/main/data/network-poin
     });
 
     map.addLayer(heatmapLayer);
-    
-    map.setLayoutProperty(heatmapLayer.id, 'visibility', 'none');
 
     map.on('load', () => {
       map.setLayoutProperty(heatmapLayer.id, 'visibility', 'none');
